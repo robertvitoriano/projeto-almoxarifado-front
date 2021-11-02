@@ -6,7 +6,10 @@ import { setToken } from 'store/modules/auth/reducer'
 import logo from 'assets/fazPlasticoIcon.png'
 
 import {
-  Wrapper
+  Wrapper,
+  PageTitle,
+  PageTitleSection,
+  Content
 } from './styles'
 import Swal from 'sweetalert2'
 import api from 'services/api'
@@ -17,7 +20,10 @@ const Home = () => {
 
   return <>
     <Wrapper>
-    <h1>Hello wORLD</h1>
+    <PageTitleSection>
+      <PageTitle>Almoxarifado</PageTitle>
+    </PageTitleSection>
+    <Content/>
     </Wrapper>
   </>
 }
