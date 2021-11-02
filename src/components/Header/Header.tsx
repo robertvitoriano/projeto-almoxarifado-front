@@ -12,7 +12,6 @@ import { useLocation } from 'react-router-dom'
 import logoutIcon from 'assets/logout.png'
 import goBackIcon from 'assets/left-arrow.png'
 
-import React from 'react'
 const Header = () => {
 
   const location = useLocation()
