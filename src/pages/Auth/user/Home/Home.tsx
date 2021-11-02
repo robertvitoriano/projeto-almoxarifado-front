@@ -17,6 +17,7 @@ const Home = () => {
 
   return <>
     <Wrapper>
+    <h1>Hello wORLD</h1>
     </Wrapper>
   </>
 }
