@@ -45,7 +45,7 @@ const SignIn = () => {
       dispatch(setToken(token));
       setIsLoading(false)
 
-      history.push('/notes')
+      history.push('/home')
 
     } catch (error: any) {
       console.error(error)
@@ -59,6 +59,10 @@ const SignIn = () => {
     }
 
   };
+
+  const handleRegisterRequestEmail = () => {
+    console.log('handleRegisterRequestEmail')
+  }
 
   return <>
     <Wrapper>
@@ -79,7 +83,7 @@ const SignIn = () => {
             <Input />
           </InputContainer>
           <LoginButton onClick={handleSignIn}>Login</LoginButton>
-          <SignUpLink to="/signup">Não tenho cadastro</SignUpLink>
+          <SignUpLink onClick = {handleRegisterRequestEmail}>Não tenho cadastro</SignUpLink>
         </FormContainer>
       </FormSection>
     </Wrapper>
