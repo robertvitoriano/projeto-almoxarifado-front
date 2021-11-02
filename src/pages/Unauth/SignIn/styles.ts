@@ -46,7 +46,7 @@ font-size: 2rem;
 `
 
 export const LoginButton = styled.div`
-background-color: #39d921;
+background-color: #54b823;
 color:white;
 font-weight:bolder;
 font-size: 1.2rem;

@@ -16,7 +16,7 @@ const Header = () => {
 
   const location = useLocation()
 
-  const isHome = location.pathname === '/'
+  const isHome = location.pathname === '/home'
 
   return (
     <>
