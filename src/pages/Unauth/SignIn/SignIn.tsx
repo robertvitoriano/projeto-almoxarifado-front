@@ -36,14 +36,14 @@ const SignIn = () => {
 
       setIsLoading(true)
 
-      const response = await api.post('/users/login');
+      // const response = await api.post('/users/login');
 
-      const { token, user } = response.data;
+      // const { token, user } = response.data;
 
-      localStorage.setItem("token", 'Bearer ' + token);
-      // localStorage.setItem("userId", user._id);
-      dispatch(setToken(token));
-      setIsLoading(false)
+      // localStorage.setItem("token", 'Bearer ' + token);
+      // // localStorage.setItem("userId", user._id);
+      // dispatch(setToken(token));
+      // setIsLoading(false)
 
       history.push('/home')
 

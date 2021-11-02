@@ -11,6 +11,7 @@ import { AuthLayout } from "layouts";
 import { useSelector } from 'react-redux'
 
 
+
 export default function App() {
   //@ts-ignore
   const token = useSelector((state) => state.auth.token)
@@ -19,7 +20,7 @@ export default function App() {
     <Router>
       {!token ?
         <Switch>
-          <Route path={"/"} exact component={LoginPage} />
+          <Route path={"/"} exact component={HomePage} />
           {unauthRoutes.map((route, index) => (<Route path={route.path} component={route.component} key={index} />))}
         </Switch> :
         <AuthLayout>

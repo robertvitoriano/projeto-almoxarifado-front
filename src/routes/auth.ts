@@ -1,5 +1,4 @@
 import Home from  './../pages/Auth/user/Home'
-
 const routes = [
   {
     component:Home,
