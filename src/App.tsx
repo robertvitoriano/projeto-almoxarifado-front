@@ -4,8 +4,9 @@ import {
   Route
 } from "react-router-dom";
 import LoginPage from 'pages/Unauth/SignIn'
+import HomePage from 'pages/Auth/user/Home'
 
-import { unauthRoutes } from './routes'
+import { unauthRoutes, authRoutes } from './routes'
 import { AuthLayout } from "layouts";
 import { useSelector } from 'react-redux'
 
@@ -26,12 +27,12 @@ export default function App() {
             <Route
               path={"/"}
               exact
-              component={LoginPage} />
-            {/* {commonRoutes.map((route, index) => (<Route
+              component={HomePage} />
+            {authRoutes.map((route, index) => (<Route
               exact
               path={route.path}
               component={route.component}
-              key={index} />))} */}
+              key={index} />))} 
           </Switch>
         </AuthLayout>}
     </Router>

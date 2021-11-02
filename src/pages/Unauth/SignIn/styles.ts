@@ -75,7 +75,7 @@ export const InputLabel = styled.label`
 font-weight: bold;
 color:white;
 `
-export const SignUpLink = styled(Link)`
+export const SignUpLink = styled.div`
 font-weight: bold;
 color:white;
 text-decoration: none;
