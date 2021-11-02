@@ -29,7 +29,7 @@ height:15vh;
 
 export const FormSection = styled.div`
 background-color: #455448;
-padding:  2rem 3rem;
+padding:  3rem;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -62,7 +62,7 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content:space-evenly;
+justify-content:space-between;
 `
 export const InputContainer = styled.div`
 display: flex;

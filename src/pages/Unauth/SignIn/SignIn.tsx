@@ -31,39 +31,34 @@ const SignIn = () => {
 
   const dispatch = useDispatch()
 
-  const onFinish = async () => {
-    // try {
+  const handleSignIn = async () => {
+    try {
 
-    //   setIsLoading(true)
+      setIsLoading(true)
 
-    //   const response = await api.post('/users/login');
+      const response = await api.post('/users/login');
 
-    //   const { token, user } = response.data;
+      const { token, user } = response.data;
 
-    //   localStorage.setItem("token", 'Bearer ' + token);
-    //   // localStorage.setItem("userId", user._id);
-    //   dispatch(setToken(token));
-    //   setIsLoading(false)
+      localStorage.setItem("token", 'Bearer ' + token);
+      // localStorage.setItem("userId", user._id);
+      dispatch(setToken(token));
+      setIsLoading(false)
 
-    //   history.push('/notes')
+      history.push('/notes')
 
-    // } catch (error: any) {
-    //   console.error(error)
-    //   setIsLoading(false)
+    } catch (error: any) {
+      console.error(error)
+      setIsLoading(false)
 
-    //   Swal.fire(
-    //     'Um erro aconteceu',
-    //     String(error.message),
-    //     'error'
-    //   )
-    // }
+      Swal.fire(
+        'Um erro aconteceu',
+        String(error.message),
+        'error'
+      )
+    }
 
   };
-
-  const onFinishFailed = () => {
-    console.log('Failed');
-  };
-
 
   return <>
     <Wrapper>
@@ -74,21 +69,17 @@ const SignIn = () => {
         </WelcomeMessage>
       </PresentationSection>
       <FormSection >
-        {/* <Input/>
-        <Input/>
-        <LoginButton onClick={() => onFinish()}>
-        </LoginButton> */}
         <FormContainer>
           <InputContainer>
           <InputLabel>EMAIL</InputLabel>
             <Input />
-          </InputContainer>,
+          </InputContainer>
           <InputContainer>
           <InputLabel>SENHA</InputLabel>
             <Input />
           </InputContainer>
-          <LoginButton onClick={() => onFinish()}>Login</LoginButton>
-          <SignUpLink to="/">Não tenho cadastro</SignUpLink>
+          <LoginButton onClick={handleSignIn}>Login</LoginButton>
+          <SignUpLink to="/signup">Não tenho cadastro</SignUpLink>
         </FormContainer>
       </FormSection>
     </Wrapper>
