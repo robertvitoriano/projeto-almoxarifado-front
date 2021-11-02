@@ -28,7 +28,7 @@ const Header = () => {
           <Content>
             {isHome?<GobackButtonEmpty/>:<GobackButton src={goBackIcon}  />}
             <WelcomeMessage>Olá João Cláudio Palett </WelcomeMessage>
-            <LogoutButton src={logoutIcon} />
+            {isHome?<LogoutButton src={logoutIcon} />:''}
           </Content>
         </Wrapper>
       </PhoneBreakPoint>
